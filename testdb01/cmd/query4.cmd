@@ -10,7 +10,7 @@ if %errorlevel% NEQ 0 goto badend
 
 @echo on
 REM run sql
-sqlplus -l %connectstring% @\testdb01\sqll\query4.sql
+sqlplus -l %connectstring% @\testdb01\sql\query4.sql
 if %errorlevel% NEQ 0 (set /A myErrors+=1)
 
 REM copy output
