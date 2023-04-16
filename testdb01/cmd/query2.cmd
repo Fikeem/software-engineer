@@ -14,6 +14,9 @@ REM copy output
 copy \testdb01\log\sql2.log \testapp01\input\ 
 if %errorlevel% NEQ 0 (set /A myErrors+=1)
 
+REM get password succeeded, sql and or copy failed
+if %myErrors% NEQ 0 goto badend
+
 :end
 echo Success!
 exit /b 0
