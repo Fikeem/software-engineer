@@ -34,14 +34,18 @@ echo %~n0: %~1 is an invalid user
 goto abort_end
 
 
-REM Jump to connection after IF, ELSE Fails
+REM Set DB Connection String
 :connectstring
 set CONNECTSTRING=%USER_NAME%/%PASS_WORD%@%DB_SID%
 
+REM Test the connection, jump if fail
+sqlplus -l %CONNECTSTRING% @\testdb01\sql\query3.sql
+if %errorlevel% NEQ 0 goto abort_end
+
 :good_end
 echo %~n0: Successfully set PASS_WORD for %user_name%
-exit /B 0
+exit /b 0
 
 :abort_end
 echo %~n0: Unable to set PASS_WORD for %~1
-exit /B 1
+exit /b 1
