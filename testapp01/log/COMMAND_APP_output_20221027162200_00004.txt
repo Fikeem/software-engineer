@@ -1,0 +1,33 @@
+
+REM script to copy file to share 
+
+set myErrors=0 
+
+copy \testapp01\output\test.txt \\rm15fs01\crms\ 
+The network path was not found.
+        0 file(s) copied.
+
+if 1 NEQ 0 set /A myErrors+=1 
+
+exit /b 1 
+
+     Job Object statistics
+     ====================
+Total User CPU Time: 0.047 second  
+
+Total Kernel CPU Time: 0.031 second  
+
+This Period Total User CPU Time: 0.047 second  
+
+This Period Total Kernel CPU Time: 0.031 second  
+
+Total Page Fault Count: 3475 
+
+Total Processes: 2 
+
+Active Processes: 0 
+
+Total Terminated Processes: 0 
+
+Total peak job memory used: 9.122 mega bytes  
+

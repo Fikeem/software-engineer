@@ -1,0 +1,32 @@
+
+REM query4.cmd - script to query the db and copy output 
+
+set myErrors=0 
+
+REM get password 
+
+d:
+
+call \testdb01\cmd\db_login.cmd opstest
+
+REM script to set passwords and connectstrings to login to db 
+
+set DB_SID=GFMP 
+db_login: Successfully set PASS_WORD for opstest
+
+REM run sql 
+
+sqlplus -l opstest/strongPass1@GFMP @\testdb01\sqll\query4.sql 
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Thu Oct 27 12:49:23 2022
+Version 19.15.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Last Successful login time: Thu Oct 27 2022 11:51:01 -04:00
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.15.0.0.0
+
+SP2-0310: unable to open file "testdb01\sqll\query4.sql"

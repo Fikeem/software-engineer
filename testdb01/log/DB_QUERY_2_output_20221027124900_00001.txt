@@ -1,0 +1,49 @@
+
+REM query2.cmd - script to query the db and copy output 
+
+set myErrors=0 
+
+REM get password 
+
+d:
+
+call \testdb01\cmd\db_login.cmd opstest_up 
+
+REM script to set passwords and connectstrings to login to db 
+
+set DB_SID=GFMP 
+db_login: Successfully set PASS_WORD for opstest_up
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Thu Oct 27 12:49:23 2022
+Version 19.15.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+ERROR:
+ORA-28000: The account is locked.
+
+
+SP2-0751: Unable to connect to Oracle.  Exiting SQL*Plus
+The system cannot find the file specified.
+Success!
+
+     Job Object statistics
+     ====================
+Total User CPU Time: 0.094 second  
+
+Total Kernel CPU Time: 0.047 second  
+
+This Period Total User CPU Time: 0.094 second  
+
+This Period Total Kernel CPU Time: 0.047 second  
+
+Total Page Fault Count: 9028 
+
+Total Processes: 3 
+
+Active Processes: 0 
+
+Total Terminated Processes: 0 
+
+Total peak job memory used: 19.460 mega bytes  
+
