@@ -1,9 +1,9 @@
 REM query2.cmd - script to query the db and copy output
 set myErrors=0
 
-REM get password
+REM get password; provides openffs_up as argument to db_login.cmd
 d:
-call \testdb01\cmd\db_login.cmd openffs_up
+call \testdb01\cmd\db_login.cmd opstest_up
 if %errorlevel% NEQ 0 goto badend
 
 REM run sql

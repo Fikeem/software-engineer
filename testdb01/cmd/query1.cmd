@@ -3,7 +3,7 @@ set myErrors=0
 
 REM get password and connectstring
 d:
-call \testdb01\cmd\db_login.cmd openffs_ro
+call \testdb01\cmd\db_login.cmd opstest_ro
 if %errorlevel% NEQ 0 goto badend
 
 REM run sql

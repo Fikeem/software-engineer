@@ -5,7 +5,7 @@ set myErrors=0
 
 REM get password
 d:
-call \testdb01\cmd\db_login.cmd openffs
+call \testdb01\cmd\db_login.cmd opstest
 if %errorlevel% NEQ 0 goto badend
 
 @echo on
