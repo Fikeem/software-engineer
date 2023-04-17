@@ -11,7 +11,7 @@ sqlplus -l %connectstring% @\testdb01\sql\query1.sql
 if %errorlevel% NEQ 0 (set /A myErrors+=1)
 
 REM copy output
-copy \testdb01\log\sql1.log \testapp01\input\ 
+copy \testdb01\log\sql1.log \testapp01\input\sql1.txt 
 if %errorlevel% NEQ 0 (set /A myErrors+=1)
 
 REM get password succeeded, sql and or copy failed
